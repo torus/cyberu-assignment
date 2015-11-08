@@ -6,10 +6,10 @@ JAVAS = $(wildcard *.java)
 test: $(TEST_TARGET).class $(JAVAS)
 	java $(TEST_JFLAGS) org.junit.runner.JUnitCore $(TEST_TARGET)
 
-run: $(TARGET).class $(JAVAS)
+run: $(TARGET).class
 	java $(TARGET)
 
-$(TARGET).class:
+$(TARGET).class: $(JAVAS)
 	javac $(TARGET).java
 
 $(TEST_TARGET).class:
