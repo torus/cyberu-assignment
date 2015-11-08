@@ -80,9 +80,9 @@ class DentakuTimerListener implements ActionListener {
     }
 }
 
-class StackQueue extends JFrame{
+class Dentaku extends JFrame{
     public static void main(String args[]){
-	StackQueue frame = new StackQueue("タイトル");
+	Dentaku frame = new Dentaku("タイトル");
 	frame.setVisible(true);
 
     }
@@ -99,7 +99,7 @@ class StackQueue extends JFrame{
 	return panel;
     }
 
-    StackQueue(String title){
+    Dentaku(String title){
 	setTitle(title);
 	setBounds(100, 100, 300, 250);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

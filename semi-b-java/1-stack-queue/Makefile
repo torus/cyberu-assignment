@@ -1,4 +1,4 @@
-TARGET = StackQueue
+TARGET = Dentaku
 TEST_TARGET = StackQueueTest
 TEST_JFLAGS = -classpath .:/usr/share/java/junit4-4.11.jar
 JAVAS = $(wildcard *.java)
