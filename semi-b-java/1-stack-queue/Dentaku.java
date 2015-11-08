@@ -12,7 +12,6 @@ class DentakuActionListener implements ActionListener {
 
     public void actionPerformed(ActionEvent ev) {
 	JButton btn = (JButton)ev.getSource();
-	System.out.println(btn.getText());
 	this.inputs.enqueue(btn.getText());
     }
 }
@@ -82,9 +81,8 @@ class DentakuTimerListener implements ActionListener {
 
 class Dentaku extends JFrame{
     public static void main(String args[]){
-	Dentaku frame = new Dentaku("タイトル");
+	Dentaku frame = new Dentaku("Dentaku");
 	frame.setVisible(true);
-
     }
 
     private JPanel makeRow(ActionListener al, String... labels) {
