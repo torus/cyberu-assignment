@@ -1,9 +1,29 @@
 public class ListElement {
-    public ListElement(Object val) {}
-    public Object get() {
-	return null;
+    private Object value = null;
+    private ListElement next = null;
+    private ListElement previous = null;
+
+    public ListElement(Object val) {
+	value = val;
     }
 
-    public void insert() {
+    public Object get() {
+	return value;
+    }
+
+    public ListElement getNext() {
+	return next;
+    }
+
+    public void setNext(ListElement elem) {
+	next = elem;
+    }
+
+    public ListElement getPrevious() {
+	return previous;
+    }
+
+    public void setPrevious(ListElement elem) {
+	previous = elem;
     }
 }

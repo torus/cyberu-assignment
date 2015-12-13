@@ -6,6 +6,9 @@ JAVAS = $(wildcard *.java)
 test: $(TEST_TARGET).class $(JAVAS)
 	java $(TEST_JFLAGS) org.junit.runner.JUnitCore $(TEST_TARGET)
 
+$(TEST_TARGET).class: $(JAVAS)
+	javac $(TEST_TARGET).java
+
 run: $(TARGET).class
 	java $(TARGET)
 

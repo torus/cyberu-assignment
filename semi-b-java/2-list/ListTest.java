@@ -60,6 +60,17 @@ public class ListTest {
     }
 
     @Test
+    public void pushToEmptyList() {
+	List lis = new List();
+
+	lis.push(1);
+	assertArrayEquals(new Object[]{1}, lis.getElementsAsArray());
+
+    	lis.push(2);
+	assertArrayEquals(new Object[]{1, 2}, lis.getElementsAsArray());
+    }
+
+    @Test
     public void push() {
 	Object[] data = {1, 2, 3};
 	List lis = new List(data);
@@ -83,6 +94,18 @@ public class ListTest {
     }
 
     @Test
+    public void insertLast() {
+	Object[] data = {1, 2, 3};
+	List lis = new List(data);
+
+	ListElement elem = lis.find(3);
+	lis.insertAfter(elem, 5);
+
+	Object[] elems = lis.getElementsAsArray();
+	assertArrayEquals(new Object[]{1, 2, 3, 5}, elems);
+    }
+
+    @Test
     public void delete() {
 	Object[] data = {1, 2, 3, 4};
 	List lis = new List(data);
@@ -92,5 +115,29 @@ public class ListTest {
 
 	Object[] elems = lis.getElementsAsArray();
 	assertArrayEquals(new Object[]{1, 3, 4}, elems);
+    }
+
+    @Test
+    public void deleteFirst() {
+	Object[] data = {1, 2, 3, 4};
+	List lis = new List(data);
+
+	ListElement elem = lis.find(1);
+	lis.delete(elem);
+
+	Object[] elems = lis.getElementsAsArray();
+	assertArrayEquals(new Object[]{2, 3, 4}, elems);
+    }
+
+    @Test
+    public void deleteLast() {
+	Object[] data = {1, 2, 3, 4};
+	List lis = new List(data);
+
+	ListElement elem = lis.find(4);
+	lis.delete(elem);
+
+	Object[] elems = lis.getElementsAsArray();
+	assertArrayEquals(new Object[]{1, 2, 3}, elems);
     }
 }
