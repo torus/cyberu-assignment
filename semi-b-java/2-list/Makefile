@@ -1,13 +1,12 @@
 TARGET = List
 TEST_TARGET = ListTest
-TEST_JFLAGS = -classpath .:/usr/share/java/junit4-4.11.jar
+TEST_JFLAGS = -classpath .:junit-4.12.jar:hamcrest-core-1.3.jar
 JAVAS = $(wildcard *.java)
 
 test: $(TEST_TARGET).class $(JAVAS)
 	java $(TEST_JFLAGS) org.junit.runner.JUnitCore $(TEST_TARGET)
 
 $(TEST_TARGET).class: $(JAVAS)
-	javac $(TEST_TARGET).java
 
 run: $(TARGET).class
 	java $(TARGET)
