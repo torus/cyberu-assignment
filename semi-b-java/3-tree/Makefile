@@ -1,6 +1,6 @@
 TARGET = BinaryTree
 TEST_TARGET = BinaryTreeTest
-TEST_JFLAGS = -classpath .:/usr/share/java/junit4.jar
+TEST_JFLAGS = -classpath .:junit-4.12.jar:hamcrest-core-1.3.jar
 JAVAS = $(wildcard *.java)
 
 test: $(TEST_TARGET).class $(JAVAS)
