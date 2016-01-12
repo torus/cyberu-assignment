@@ -82,5 +82,6 @@ public class BinaryTreeNode {
 /*
 Local Variables:
 tab-width: 8;
+indent-tabs-mode: nil;
 End:
  */

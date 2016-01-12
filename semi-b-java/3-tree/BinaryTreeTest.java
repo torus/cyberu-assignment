@@ -4,20 +4,20 @@ import org.junit.Test;
 public class BinaryTreeTest {
     @Test
     public void create() {
-	BinaryTree tree = new BinaryTree();
-	assertNotNull(tree);
+        BinaryTree tree = new BinaryTree();
+        assertNotNull(tree);
     }
 
     @Test
     public void createNode() {
-	BinaryTreeNode node = new BinaryTreeNode(10, "foo");
-	assertEquals(10, node.getKey());
-	assertEquals("foo", node.getValue());
+        BinaryTreeNode node = new BinaryTreeNode(10, "foo");
+        assertEquals(10, node.getKey());
+        assertEquals("foo", node.getValue());
     }
 
     @Test
     public void setLeft() {
-	BinaryTreeNode node = new BinaryTreeNode(10, "foo");
+        BinaryTreeNode node = new BinaryTreeNode(10, "foo");
         BinaryTreeNode ret = node.setLeft(new BinaryTreeNode(8, "bar"));
         assertEquals(ret, node);
         assertEquals("bar", node.getLeft().getValue());
@@ -25,7 +25,7 @@ public class BinaryTreeTest {
 
     @Test
     public void setRight() {
-	BinaryTreeNode node = new BinaryTreeNode(10, "foo");
+        BinaryTreeNode node = new BinaryTreeNode(10, "foo");
         BinaryTreeNode ret = node.setRight(new BinaryTreeNode(8, "bar"));
         assertEquals(ret, node);
         assertEquals("bar", node.getRight().getValue());
@@ -33,14 +33,14 @@ public class BinaryTreeTest {
 
     @Test
     public void setRoot() {
-	BinaryTreeNode node = new BinaryTreeNode(10, "foo");
-	BinaryTree tree = new BinaryTree();
-	tree.setRoot(node);
+        BinaryTreeNode node = new BinaryTreeNode(10, "foo");
+        BinaryTree tree = new BinaryTree();
+        tree.setRoot(node);
 
-	BinaryTreeNode root = tree.getRoot();
-	assertNotNull(root);
+        BinaryTreeNode root = tree.getRoot();
+        assertNotNull(root);
 
-	assertEquals("foo", root.getValue());
+        assertEquals("foo", root.getValue());
     }
 
     private BinaryTreeNode node(BinaryTreeNode l, Comparable o, BinaryTreeNode r) {
@@ -67,8 +67,8 @@ public class BinaryTreeTest {
     @Test
     public void search() {
         BinaryTreeNode root = makeTree();
-	BinaryTree tree = new BinaryTree();
-	tree.setRoot(root);
+        BinaryTree tree = new BinaryTree();
+        tree.setRoot(root);
 
         BinaryTreeNode found = tree.search(7);
         assertEquals(7, found.getValue());
@@ -77,8 +77,8 @@ public class BinaryTreeTest {
     @Test
     public void searchNonexistent() {
         BinaryTreeNode root = makeTree();
-	BinaryTree tree = new BinaryTree();
-	tree.setRoot(root);
+        BinaryTree tree = new BinaryTree();
+        tree.setRoot(root);
 
         BinaryTreeNode found = tree.search(123);
         assertNull(null, found);
@@ -87,8 +87,8 @@ public class BinaryTreeTest {
     @Test
     public void insert() throws Exception {
         BinaryTreeNode root = makeTree();
-	BinaryTree tree = new BinaryTree();
-	tree.setRoot(root);
+        BinaryTree tree = new BinaryTree();
+        tree.setRoot(root);
 
         BinaryTree newTree = tree.insert(node(null, 8, null));
         assertEquals(newTree, tree);
@@ -102,5 +102,6 @@ public class BinaryTreeTest {
 /*
 Local Variables:
 tab-width: 8;
+indent-tabs-mode: nil;
 End:
  */

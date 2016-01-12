@@ -14,17 +14,18 @@ public class BinaryTree {
     }
 
     public BinaryTreeNode getRoot() {
-	return root;
+        return root;
     }
 
     public BinaryTree setRoot(BinaryTreeNode node) {
-	root = node;
-	return this;
+        root = node;
+        return this;
     }
 }
 
 /*
 Local Variables:
 tab-width: 8;
+indent-tabs-mode: nil;
 End:
  */
