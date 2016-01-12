@@ -1,18 +1,16 @@
 public class BinaryTree {
     private BinaryTreeNode root = null;
 
-    public BinaryTreeNode search(Object key) {
-	return null;
+    public BinaryTreeNode search(Comparable key) {
+        return root.search(key);
     }
 
-    public BinaryTree insertLeft(BinaryTreeNode parent, BinaryTreeNode child) {
-	parent.setLeft(child);
-	return this;
-    }
-
-    public BinaryTree insertRight(BinaryTreeNode parent, BinaryTreeNode child) {
-	parent.setLeft(child);
-	return this;
+    public BinaryTree insert(BinaryTreeNode node) throws Exception {
+        if (root == null) {
+            return setRoot(node);
+        }
+        root.insert(node);
+        return this;
     }
 
     public BinaryTreeNode getRoot() {
@@ -24,3 +22,9 @@ public class BinaryTree {
 	return this;
     }
 }
+
+/*
+Local Variables:
+tab-width: 8;
+End:
+ */
